@@ -1,0 +1,101 @@
+/* Center the signup container */
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f3f4f6; /* Light gray background */
+  }
+  
+  /* Signup box */
+  .signup-box {
+    width: 400px;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .signup-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Heading */
+  .signup-box h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+  }
+  
+  /* Input fields */
+  .input-group {
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .input-group input:focus {
+    border-color: #2563eb; /* Blue highlight */
+    outline: none;
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.2);
+  }
+  
+  /* Icons */
+  .input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    font-size: 18px;
+  }
+  
+  /* Signup button */
+  .signup-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .signup-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+  }
+  
+  /* Link to login */
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #64748b;
+  }
+  
+  .login-link a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
