@@ -391,7 +391,7 @@ const ResumeEditor = () => {
       }
       
       // Navigate to preview with current data and capture PDF there
-      navigate("/preview", { 
+      navigate("/resume-preview", { 
         state: { 
           template: selectedTemplate, 
           resumeData,
@@ -451,7 +451,7 @@ const ResumeEditor = () => {
     }
     
     // If validation passes, navigate to preview
-    navigate("/preview", { state: { template: selectedTemplate, resumeData } });
+    navigate("/resume-preview", { state: { template: selectedTemplate, resumeData } });
   };
 
   // Reset form data

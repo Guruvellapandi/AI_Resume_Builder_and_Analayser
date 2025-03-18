@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import TemplateSelection from "./pages/TemplateSelection";
 import ResumeEditor from "./pages/ResumeEditor";
+import ResumePreview from "./pages/ResumePreview";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/resume-preview" element={<ResumePreview />} />
         <Route path="/templates" element={<TemplateSelection />} />
         <Route path="/resume-editor" element={<ResumeEditor />} />
       </Routes>
