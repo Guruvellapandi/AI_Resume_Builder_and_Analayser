@@ -442,7 +442,7 @@ const ResumePreview = () => {
         <p>Please go back and create a resume first.</p>
         <button 
           className="back-button" 
-          onClick={() => navigate("/create")}
+          onClick={() => navigate("/templates")}
         >
           Create Resume
         </button>
