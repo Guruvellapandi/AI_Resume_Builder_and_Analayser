@@ -1,54 +1,295 @@
-/* 🌟 Template Selection Page */
-.template-selection {
-    text-align: center;
-    padding: 40px;
-    background: linear-gradient(135deg, #f4f4f4, #e6e6e6);
-    min-height: 100vh;
+/* TemplateSelection.css */
+
+/* Animation for hover effects */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
   }
-  
-  .template-selection h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
   }
-  
-  .template-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
   }
-  
-  .template-card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    width: 220px;
+}
+
+/* Base styles */
+.template-selection-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 1rem;
+}
+
+/* Header styles */
+.template-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.template-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.template-subtitle {
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+/* View mode toggle */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.toggle-button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-button.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.toggle-button:not(.active) {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.toggle-button:hover:not(.active) {
+  background-color: #d1d5db;
+}
+
+/* Template grid */
+.templates-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .templates-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .template-card img {
-    width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .templates-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-  
-  .template-card p {
-    margin-top: 12px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  .template-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .template-card:hover img {
-    transform: scale(1.05);
-  }
-  
+}
+
+/* Template card */
+.template-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.template-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.template-card.selected {
+  border: 2px solid #2563eb;
+  animation: pulse 2s infinite;
+}
+
+/* Template image container */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.template-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .template-image {
+  transform: scale(1.05);
+}
+
+/* Selected indicator */
+.selected-indicator {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Template info */
+.template-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.template-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Select button */
+.select-button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.select-button.selected {
+  background-color: #2563eb;
+  color: white;
+}
+
+.select-button:not(.selected) {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.select-button:hover:not(.selected) {
+  background-color: #d1d5db;
+}
+
+/* Preview mode */
+.preview-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin: 0 auto;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 0.5rem;
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.preview-description {
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Continue button */
+.continue-button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.continue-button {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.continue-button.active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.continue-button.active:hover {
+  background-color: #1d4ed8;
+}
+
+.continue-button.disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Action buttons */
+.action-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.action-button.primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: #1d4ed8;
+}
+
+.action-button.secondary {
+  background-color: #e5e7eb;
+  color: #4b5563;
+}
+
+.action-button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+}
+
+.empty-state-text {
+  color: #6b7280;
+  font-size: 1.125rem;
+}

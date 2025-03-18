@@ -90,10 +90,10 @@ const ResumeEditor = () => {
   const fetchTemplates = async () => {
     // In a real app, this would be an API call
     const mockTemplates = [
-      { id: 1, name: "Professional", image: "/templates/professional.jpg", primaryColor: "#0070f3" },
-      { id: 2, name: "Creative", image: "/templates/creative.jpg", primaryColor: "#6b46c1" },
-      { id: 3, name: "Minimal", image: "/templates/minimal.jpg", primaryColor: "#2c3e50" },
-      { id: 4, name: "Modern", image: "/templates/modern.jpg", primaryColor: "#38a169" }
+      { id: 1, name: "Professional", image: "/assets/professional.jpg", primaryColor: "#0070f3" },
+      { id: 2, name: "Creative", image: "/assets/creative.jpg", primaryColor: "#6b46c1" },
+      { id: 3, name: "Minimal", image: "/assets/classic.jpg", primaryColor: "#2c3e50" },
+      { id: 4, name: "Modern", image: "/assets/modern.jpg", primaryColor: "#38a169" }
     ];
     setAvailableTemplates(mockTemplates);
   };
