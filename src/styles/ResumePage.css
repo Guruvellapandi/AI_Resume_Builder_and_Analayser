@@ -1,0 +1,160 @@
+/* ResumeEditor.css */
+
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+  }
+  
+  /* Resume page specific styles */
+  .resume-page-container {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Button hover effects */
+  .button-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .button-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Feature card styles */
+  .feature-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 86, 179, 0.03);
+  }
+  
+  /* Icon styles */
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+  }
+  
+  /* Typography enhancements */
+  .page-title {
+    font-weight: 700;
+    color: #0056b3;
+    letter-spacing: -0.5px;
+  }
+  
+  .subtitle {
+    color: #666;
+    font-weight: 400;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+  }
+  
+  /* Loading state */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+  
+  .loading-text {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 600px) {
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .subtitle {
+      max-width: 95%;
+      font-size: 0.9rem;
+    }
+    
+    .feature-card {
+      padding: 1rem;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 960px) {
+    .page-title {
+      font-size: 2.2rem;
+    }
+  }
+  
+  /* Paper component custom styles */
+  .main-paper {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  /* Divider styles */
+  .section-divider {
+    width: 70%;
+    margin: 2rem auto;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button styles */
+  .action-button {
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-weight: bold;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.2);
+  }
+  
+  /* Grid container for features */
+  .features-grid {
+    padding: 0 1rem;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #0056b3;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #003d7a;
+  }
