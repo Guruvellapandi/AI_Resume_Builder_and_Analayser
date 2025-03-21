@@ -16,6 +16,7 @@
     "@mui/material": "^6.4.8",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.0",
+    "lucide-react": "^0.483.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-draggable": "^4.4.6",
